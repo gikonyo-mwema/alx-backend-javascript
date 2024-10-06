@@ -1,22 +1,22 @@
-import { expect } from 'chai';
-import sinon from 'sinon';
-import Utils from './utils.js';
-import sendPaymentRequestToApi from './3-payment.js';
+const sinon = require("sinon");
 
-describe('sendPaymentRequestToApi', function () {
-  let spy;
+const { expect } = require("chai");
 
-  beforeEach(function () {
-    spy = sinon.spy(Utils, 'calculateNumber');
-  });
+const sendPaymentRequestToApi = require("./3-payment");
 
-  afterEach(function () {
-    spy.restore();
-  });
+const Utils = require("./utils");
 
-  it('should call Utils.calculateNumber with SUM, 100, 20', function () {
+describe("Spies", function () {
+  it("has the same math", () => {
+    const spyUtils = sinon.spy(Utils, "calculateNumber");
+    const spyConsole = sinon.spy(console, "log");
+
     sendPaymentRequestToApi(100, 20);
-    expect(spy.calledOnceWithExactly('SUM', 100, 20)).to.be.true;
+
+    expect(spyUtils.calledOnceWithExactly("SUM", 100, 20)).to.be.true;
+    expect(spyConsole.calledOnceWithExactly("The total is: 120")).to.be.true;
+
+    spyUtils.restore();
+    spyConsole.restore();
   });
 });
-
