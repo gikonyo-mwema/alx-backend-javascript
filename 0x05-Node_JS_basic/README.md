@@ -129,3 +129,19 @@ module.exports = {
 
 and…
 Don’t forget to run $ npm install when you have the package.json
+
+## Tasks
+
+| Task | Topic | File |
+| --- | --- | --- |
+| 0 | Write output to the console | [0-console.js](./0-console.js) |
+| 1 | Read input from standard input | [1-stdin.js](./1-stdin.js) |
+| 2 | Read a file synchronously | [2-read_file.js](./2-read_file.js) |
+| 3 | Read a file asynchronously | [3-read_file_async.js](./3-read_file_async.js) |
+| 4 | Create an HTTP server | [4-http.js](./4-http.js) |
+| 5 | Create an HTTP server with route handling | [5-http.js](./5-http.js) |
+| 6 | Create an Express server | [6-http_express.js](./6-http_express.js) |
+| 7 | Add routes with Express | [7-http_express.js](./7-http_express.js) |
+| Full server | Build a student-directory Express server with controllers and routes | [server.js](./full_server/server.js), [AppController.js](./full_server/controllers/AppController.js), [StudentsController.js](./full_server/controllers/StudentsController.js), [routes/index.js](./full_server/routes/index.js), [utils.js](./full_server/utils.js) |
+
+The numbered `*-main.js` files are exercise runners. Install this project's dependencies with `npm install`; `node_modules/` is excluded from version control.
